@@ -23,7 +23,7 @@ USER root
 
 COPY package.json ./
 COPY yarn.lock ./
-RUN chmod -R 777 /usr/local/share/.cache/yarn
+RUN chmod -R 777 /usr/local/share
 RUN yarn
 
 COPY ./ ./
