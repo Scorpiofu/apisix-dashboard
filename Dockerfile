@@ -23,7 +23,7 @@ USER root
 
 COPY package.json ./
 COPY yarn.lock ./
-RUN sudo nautilus
+RUN chmod -R 777 /usr/local/share/.cache/yarn
 RUN yarn
 
 COPY ./ ./
