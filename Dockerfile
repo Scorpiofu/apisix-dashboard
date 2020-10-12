@@ -23,11 +23,10 @@ USER root
 
 COPY package.json ./
 COPY yarn.lock ./
-RUN mkdir cache && yarn config set cache-folder /usr/src/app/cache
-RUN yarn
+RUN npm install
 
 COPY ./ ./
-RUN yarn build && rm -rf /usr/src/app/node_modules
+RUN npm run build build && rm -rf /usr/src/app/node_modules
 
 # phase-run
 FROM nginx:1.16-alpine
