@@ -16,7 +16,7 @@
 #
 
 # phase-build
-FROM node:12 as builder
+FROM node:14.8.0 as builder
 
 WORKDIR /usr/src/app/
 USER root
