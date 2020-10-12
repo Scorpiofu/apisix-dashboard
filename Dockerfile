@@ -23,7 +23,7 @@ USER root
 
 COPY package.json ./
 COPY yarn.lock ./
-RUN mkdir /usr/src/yarn/cache && yarn config set cache-folder /usr/src/yarn/cache
+RUN mkdir cache && yarn config set cache-folder /usr/src/app/cache
 RUN yarn
 
 COPY ./ ./
